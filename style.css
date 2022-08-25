@@ -1,0 +1,72 @@
+@font-face { font-family: avengers; 
+			 src: url('fonts/avengers.ttf'); }
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/avgbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.glassBox {
+  width: 100%;
+  height: 400px;
+  max-width: 300px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.glassBox, .glassBox * {
+  box-sizing: border-box;
+  transition: 400ms;
+  margin: auto;
+}
+.glassBox__imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.glassBox__title {
+  text-align: center;
+  margin-top: 15px;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "avengers";
+}
+.glassBox__content {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  text-align: center;
+  color: #FFF;
+  font-size: 14px;
+  font-family: "Inkfree";
+  letter-spacing: 0.1em;
+  opacity: 0;
+}
+.glassBox:hover .glassBox__imgBox {
+  transform: translateY(-50px);
+}
+.glassBox:hover .glassBox__imgBox img {
+  transform: translate(-20px, -40px) rotate(-15deg) scale(1.4);
+}
